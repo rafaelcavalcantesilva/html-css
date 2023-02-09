@@ -1,0 +1,7 @@
+Para criação de uma tabela, utilizamos a tag <table> </table>
+
+A hierarquia de tabelas simples:
+table
+  table row - <tr> </tr>
+    table header
+    table data - <td> </td>
