@@ -3,5 +3,59 @@ Para criação de uma tabela, utilizamos a tag <table> </table>
 A hierarquia de tabelas simples:
 table
   table row - <tr> </tr>
-    table header
+    table header - <tr>
     table data - <td> </td>
+
+De modo geral as tabelas mais básicas vão possuir a seguinte estrutura:
+<table>
+        <tr> <!-- Primeira Linha -->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr> <!-- Segunda Linha -->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr> <!-- Terceira Linha -->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr> <!-- Quarta Linha -->
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+    
+    Cujo resultado será:
+    A1 B1 C1
+    A2 B2 C2
+    A3 B3 C3
+    A4 B4 C4
+    
+    Podemos observar, portanto que cada <tr> é responsável por uma linha da tabela
+    e cada <td> será uma célula contida naquela linha.
+    
+    Por padrão as tabelas criadas dessa forma serão apresentadas sem linhas de 
+    grade, isso pode ser adicionado posteriormente utilizando o CSS.
+    Se a intenção for de adicionar divisórias em todos os elementos da tabela
+    basta utilizar do seletor <td> para que todas as informações sejam alteradas
+    e dentro desse seletor: border: 1px solid black; Isso adicionará a borda.
+    
+    Por padrão os elementos da tabela apresentam um espaçamento entre si que só
+    se tornarão visíveis uma vez que se colocar uma borda em todos eles, para
+    retirar esse espaçamento, basta que no seletor table se coloque o comando:
+    border-collapse: collapse;
+    
+    Para fazer o alinhamento de elementos dentro das células existem dois comandos:
+    -text-align: ; Que fará o alinhamento horizontal do elemento, aceitando os
+    seguintes valores: right, center ou left.
+    -vertical-align: ; Que será responsável pelo alinhamento vertical do conteúdo,
+    aceitando os seguinte valores: top, middle ou bottom.
+    
+    Também é possível modificar a largura e altura das células na tabela, com os
+    comandos width e height respectivamente, aplicados ao seletor table, para que
+    todas as células sejam modificadas de maneira uniforme.
