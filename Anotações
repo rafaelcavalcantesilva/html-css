@@ -59,3 +59,12 @@ De modo geral as tabelas mais básicas vão possuir a seguinte estrutura:
     Também é possível modificar a largura e altura das células na tabela, com os
     comandos width e height respectivamente, aplicados ao seletor table, para que
     todas as células sejam modificadas de maneira uniforme.
+
+Anatomia de tabelas grandes:
+TABLE
+  THEAD
+    tr, td, th
+  TBODY
+    tr, td, th
+  TFOOT
+    tr, td, th
