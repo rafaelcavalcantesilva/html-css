@@ -62,9 +62,45 @@ De modo geral as tabelas mais básicas vão possuir a seguinte estrutura:
 
 Anatomia de tabelas grandes:
 TABLE
+  CAPTION (Legenda da tabela)
   THEAD
     tr, td, th
   TBODY
     tr, td, th
   TFOOT
     tr, td, th
+
+Para fazer o escopo de títulosé utilizado o parâmetro scope: "" que aceita os seguintes valores:
+-col (quando o th é refrente ao conteúdo de uma coluna inteira
+-colgroup (referente a um grupo de colunas-mesclagem de células)
+-row (refrente a uma linha inteira)
+-rowgroup (referente a um grupo de linhas-mesclagem de células)
+ex: <th scope="col">Estado</th>
+    <th scope="col">População</th>
+Obs: No caso de um th estar com o escopo para toda uma coluna, se o mesmo receber uma alteração na
+sua largura, toda a coluna a qual ele se refere também sofrerá a mesma alteração.
+
+Para criar o efeito zebrado em uma tabela utiliza-se do seguinte código CSS:
+tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
+Basicamente é utilizada a pseudo-classe nth-child() que basicamente seleciona elementos com base em suas
+posições em um grupo de elementos irmãos. No caso o parâmetro é passado para indicar o intervalo no qual
+as configurações de estilo serão aplicadas aos elementos irmãos. Segunindo essa lógica podemos aplicar outros
+valores como odd que vai peguar todos os elementos irmão que possuem a posição ímpar ou even para as posições
+pares. O valor odd pode ser substituído por 2n-1 e o valor even pode ser substituído por 2n.
+
+Para fazer com que o cabeçalho da tabela se mantenha fixo na parte superior dela mesmo quando o scroll passar
+dele, são necessárias as seguintes configurações:
+Primeiro a tabela precisa estar com um position: relative;
+Depois é é preciso utilizar o seletor do cabeçalho da tabela:
+thead > tr > th{
+            position: sticky; (Permite que o elemento se mantenha "grudado" em algum ponto da tela)
+            top: 0; (Indica o ponto onde o mesmo estará grudado)
+            background-color: gray; (Sem essa linha apenas o texto ficará grudado na tela, o que não é ideal)
+        }
+Obs: Apesar de ser um recurso muito interessante, ele ainda não funciona perfeitamente em todos os navegadores
+
+Para fazer a mesclagem de células utilizamos os atributos colspan para mesclar colunas e o rowspan para mesclar
+linhas tudo na tag td (célula) que queremos mesclar.
+ex: <td colspan="2">B</td> Nesse caso essa célula será expandida para ocupar 2 colunas
