@@ -114,3 +114,10 @@ ex:
             <col class="cidade">
             <col class="cprof">
 </colgroup>
+É possível também agrupar mais de uma coluna utilizando o próprio span=""
+ex:
+<colgroup>
+            <col class="cnome">
+            <col class="cgrupo" span="2">
+            <col class="cprof">
+</colgroup>
