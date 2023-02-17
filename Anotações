@@ -104,3 +104,13 @@ Obs: Apesar de ser um recurso muito interessante, ele ainda não funciona perfei
 Para fazer a mesclagem de células utilizamos os atributos colspan para mesclar colunas e o rowspan para mesclar
 linhas tudo na tag td (célula) que queremos mesclar.
 ex: <td colspan="2">B</td> Nesse caso essa célula será expandida para ocupar 2 colunas
+
+Para fazer o agrupamento de colunas usamos a tag <colgroup> e dentro dela cria-se uma tag <col> que vai representar
+respectivamente cada uma das colunas da tabela.
+ex:
+<colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+</colgroup>
