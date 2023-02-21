@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Site</title>
+    <style>
+        div#content{
+            position: absolute;
+            display: inline-block;
+            padding-left: 20px;
+
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        div#conteiner{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: inline-block;
+        }
+
+        table{
+            border-collapse: collapse;
+        }
+
+        table#con td{
+            padding: 5px;
+        }
+
+        table#con td#B1, #B2, #B3, #B4{
+            border-right: 1px solid black;
+        }
+
+        table#con tr{
+            border: 1px solid black;
+        }
+
+        table#exp td, th{
+            border: 1px solid black;
+        }
+
+        table#exp th{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagens/eu.png" alt="Foto de perfil de Rafael Cavalcante da Silva">
+    <div id="conteiner">
+        <div id="content">
+            <h1>Rafael Cavalcante da Silva</h1>
+            <p><em>Técnico em mecatrônica com experiência em construção de máquinas especiais</em></p>
+            <p>Eu sou um técnico em mecatrônica e busco migrar para a área de desenvolvimento web.</p>
+        </div>
+    </div>
+    <hr>
+    <h2>Estudos</h2>
+    <ul>
+        <li>Centro Educacional SESI Valinhos</li>
+        <li>SENAI Roberto Mange
+            <ul type="circle">
+                <li>Técnico em mecatrônica</li>
+            </ul>
+        </li>
+        <li>UNICESUMAR
+            <ul type="circle">
+                <li>Engenharia de Software</li>
+            </ul>
+        </li>
+        <li>
+            Cursos online:
+            <ul type="circle">
+                <li>HTML5 e CSS3 no <a href="https://www.cursoemvideo.com/" target="_blank" rel="external">CursoemVideo</a></li>
+                <li>Fundamentos de JavaScript no <a href="https://www.cursoemvideo.com/" target="_blank" rel="external">CursoemVideo</a></li>
+                <li>The Complete 2023 Web Development Bootcamp na plataforma da <a href="https://www.udemy.com/" target="_blank" rel="external">Udemy</a></li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <h2>Experiência</h2>
+    <table id="exp">
+        <thead>
+            <tr>
+                <th>Período</th>
+                <th>Trabalho</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>03/2021 - 11/2021</td>
+                <td>Meio-Oficial de treinamento técnico na Bosch</td>
+            </tr>
+            <tr>
+                <td>11/2021 - 12/2022</td>
+                <td>Estágio de técnico em mecatrônica na área de construção de máquinas da Bosch</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Conhecimentos</h2>
+    <!-- <table id="con">
+        <tr>
+            <td class="fora">
+                <table>
+                    <tr>
+                        <td>Eletro-eletrônica</td>
+                        <td>&#x2B50 &#x2B50 &#x2B50 &#x2B50</td>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>&#x2B50 &#x2B50 &#x2B50</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>&#x2B50 &#x2B50 &#x2B50</td>
+                    </tr>
+                    <tr>
+                        <td>Mecânica de ajustagem</td>
+                        <td>&#x2B50 &#x2B50 &#x2B50</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="fora">
+                <table>
+                    <tr>
+                        <td>Mecânica de usinagem</td>
+                        <td>&#x2B50 &#x2B50</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>&#x2B50</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>&#x2B50</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table> -->
+
+    <table id="con">
+        <tr>
+            <td id="A1">Eletro-eletrônica</td>
+            <td id="B1">&#x2B50 &#x2B50 &#x2B50 &#x2B50</td>
+            <td id="C1">Mecânica de usinagem</td>
+            <td id="D1">&#x2B50 &#x2B50</td>
+        </tr>
+        <tr>
+            <td id="A2">HTML5</td>
+            <td id="B2">&#x2B50 &#x2B50 &#x2B50</td>
+            <td id="C2">Python</td>
+            <td id="D2">&#x2B50 &#x2B50</td>
+        </tr>
+        <tr>
+            <td id="A3">CSS3</td>
+            <td id="B3">&#x2B50 &#x2B50 &#x2B50</td>
+            <td id="C3">JavaScript</td>
+            <td id="D3">&#x2B50 &#x2B50</td>
+        </tr>
+        <tr>
+            <td id="A4">Mecânica de ajustagem</td>
+            <td id="B4">&#x2B50 &#x2B50 &#x2B50</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h2>Meus Hobbies</h2>
+    <ol>
+        <li>Jogos online</li>
+        <li>Estudar programação</li>
+        <li>Assistir vídeos online</li>
+        <li>Caminhadas aos fins de semana</li>
+    </ol>
+    <p><a href="contato.html" target="_self" rel="next">Contato</a></p>
+</body>
+</html>
