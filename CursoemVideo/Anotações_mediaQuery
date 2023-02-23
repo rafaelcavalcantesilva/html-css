@@ -1,0 +1,31 @@
+Em termos simples as media queries servem para limitar as folhas de estilo do CSS, de forma que uma determinada folha de estilo somente será aplicada caso as condições estabelecidas na media query forem verdadeiras. Media queries consistem de um media type e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em media features, que determinam ou verdadeiro ou falso. Os resultados da query são verdadeiros se o media type especificado na media query corresponde ao tipo do documento exibido no dispositivo e todas as expressões na media query são verdadeiras.
+Ex: @media tv and (min-width: 700px) and (orientation: landscape){...}
+No exemplo citado acima, as configurações que estiverem estabelecidas dentro dessa media query somente serão aplicadas caso o site esteja sendo aberto em um dispositivo de media type TV, que tenha 700px ou mais de largura e que esteja na orientação paisagem.
+Todos os possíveis media types são:
+-All: Para todos os dispositivos.
+-Braille: Para dispositivos táteis.
+-Embossed: Para dispositivos que imprimem em braile.
+-Handheld: Para dispositivos portáteis, geralmente com telas pequenas e banda limitada.
+-Print: Para impressão em papel.
+-Projection: Para apresentações como PPS.
+-Screen: Para monitores ou dispositivos com telas coloridas e resolução adequada.
+-Speech: Para sintetizadores de voz. As CSS 2 tem uma especificação de CSS chamada Aural, onde podemos formatar a voz dos sintetizadores.
+-Tty: Para dispositivos que possuem uma grade fixa para exibição de caracteres, tais como: Teletypes, Terminais e também dispositivos portáteis com display limitados.
+-Tv: Para dispositivos como televisores, ou seja, com baixa resolução, quantidade de cores e scroll limitados.
+
+Listas separadas por vírgulas comportam-se como o operador or quando utilizadas em media queries. Quando utilizamos media queries com uma lista separada por vírgulas, se qualquer media queries retornar verdadeiro, os estilos ou folhas de estilos serão aplicadas. Cada media query em um lista separa por vírgulas é tratada como uma query individual, e qualquer operador aplica em uma media query não afeta os outros. Isto significa que media queries separadas por vírgulas podem ter objetivos diferentes de media features, types e states.
+Por exemplo, se você quiser aplicar um conjunto de estilos se o dispositivo de visualização tiver um largura mínima de 700px ou estiver sendo segurando em paisagem, você pode escrever o seguinte:
+@media (min-width: 700px), handheld and (orientation: landscape) { ... }
+Acima, se eu estivesse em um dispositivo screen com um viewport largura de 800px, a afirmação retorna verdadeiro por que a primeira parte, interpretada como @media all and (min-width: 700px) será aplicada no meu dispositivo e portanto retorna verdadeiro, apesar do fato que meu dispositivo screen iria falhar no media type handheld na segunda media query. Do mesmo modo, se eu estivesse segurando um dispositivo em paisagem com um viewport de largura de 500px, enquanto a primeira media query falha devido a largura do viewport, a segunda media query teria sucesso e assim o media statement retorna verdadeiro.
+
+A palavra chave not se aplica em toda a media query e retorna verdadeiro, caso contrário retorna falso. Um not vai apenas negar a media query que é aplicada, de modo não toda a media query que apresente uma media querie com uma lista separada por vírgulas. A palavra chave not não pode ser usada para negar uma característica individual da query, apenas uma media query inteira. Por exemplo, o not é avaliado por último na query seguinte:
+@media not all and (monochrome) { ... }
+Isto significa que ela será avaliada assim:
+@media not (all and (monochrome)) { ... }
+Um outro exemplo, veja a media query seguinte:
+@media not screen and (color), print and (color)
+É avalida desta forma:
+@media (not (screen and (color))), print and (color)
+
+A palavra chave only previne que navegadores antigos que não suportam media queries com media features de aplicar os estilos dados:
+<link rel="stylesheet" media="only screen and (color)" href="example.css" />
