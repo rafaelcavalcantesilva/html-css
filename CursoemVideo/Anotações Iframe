@@ -1,0 +1,11 @@
+Iframe significa Inline Frame, ou seja, esses elementos são do tipo inline.
+Se trata de um quadro que se comporta como se fosse uma aba nova do navegador dentro de uma aba já existente. Sintaxe:
+<iframe src="https://www.cursoemvideo.com" frameborder="0">
+
+</iframe>
+
+Nesse caso será apresentado o site do Cursoemvideo dentro do iframe que eu criei e sem a aparição de bordas.
+Obs: existem alguns sites que possuem proteção que impede que seus conteúdos sejam exibidos por meio de iframes em sites de terceiros, o site do google é um exemplo.
+Obs2: Tudo o que estiver contido entre <iframe> e </iframe> somente será exibido caso o navegador que estiver abrindo a página não possuir suporte para iframes
+
+É possível configurar altura e largura de um iframe, sendo que por padrão eles tem 300x150px
