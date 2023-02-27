@@ -121,3 +121,5 @@ ex:
             <col class="cgrupo" span="2">
             <col class="cprof">
 </colgroup>
+
+Para tornar uma tabela responsiva basta envelopá-la em uma div e atribuir para ela um valor de overflow-x: auto; Isso criará uma barra de rolagem lateral exclusiva dela.
