@@ -4,8 +4,24 @@ Se trata de um quadro que se comporta como se fosse uma aba nova do navegador de
 
 </iframe>
 
-Nesse caso será apresentado o site do Cursoemvideo dentro do iframe que eu criei e sem a aparição de bordas.
+Nesse caso será apresentado o site do Cursoemvideo dentro do iframe que eu criei e sem a aparição de bordas. Caso queira bordas basta setar esse parâmetro frameborder para qualquer outro vaor numérico diferente de 0 por padrão pode-se utilizar o 1.
 Obs: existem alguns sites que possuem proteção que impede que seus conteúdos sejam exibidos por meio de iframes em sites de terceiros, o site do google é um exemplo.
 Obs2: Tudo o que estiver contido entre <iframe> e </iframe> somente será exibido caso o navegador que estiver abrindo a página não possuir suporte para iframes
 
-É possível configurar altura e largura de um iframe, sendo que por padrão eles tem 300x150px
+É possível configurar altura e largura de um iframe, sendo que por padrão eles tem 300x150px, essa configuração pode ser mudada diretamente na tag pois os parâmetros de width e height são parâmetros padrões do iframe. ex:
+<iframe src="https://www.cursoemvideo.com" frameborder="0" width="500px" height="500px">
+Porém, caso essa configuração seja feita tanto diretamente na tag (como no exemplo acima) quanto em alguma folha de estilo CSS, as configurações predominantes serão as da folha de estilo.
+
+Os iframes possuem também uma configuração chamada scrolling que basicamente dita se caso o conteúdo da página que você colocou lá dentro exceda o limite de altura do iframe, irá surgir uma barra de rolagem ou não. Esse parâmetro aceita três valores:
+- auto: Somente cria a bara de rolagem se for de fato necessário, ou seja, se o conteúdo do site ali contido de fato não couber no iframe (opção padrão)
+- yes: Cria a barra de rolagem independentemente se o conteúdo do site couber no iframe ou não
+- no: Não cria barra de rolagem (na verdade depende do navegador, pois em alguns casos mesmo com essa configuração dessa forma pode ser que ele cria uma bara de rolagem automaticamente)
+
+Apesar da maioria das páginas bloquear o uso de iframes, é possível utilizar páginas locais do próprio projeto nos iframes, no caso basta substituir o parâmetro src que normalmente receberia uma url externa pelo nome do documento html pertencente ao projeto.
+
+Para fazer com que um link da página principal abra uma página local dentro de um iframe, basta colocar um parâmetro name ao iframe e então no link desejado, basta colocar um atributo target com o name que foi determinado para o iframe.
+
+É possível inserir html em um iframe substituíndo o parâmetro src pelo srcdoc que aceita html dentro dele. Ex:
+<iframe srcdoc="<h1>Selecione alguma das opções acima</h1>" id="tela" name="frame">
+
+Existem dois parâmetros do iframe que o deixam mais seguro, pois caso o site que está sendo chamado dentro do iframe possua algum tipo de malware ele pode obter informações através do seu site, nesse caso pode-se utilizar esses dois atributos: sandbox="sandbox" e referrerpolicy="no-referrer" a primeira impede que informações sejam enviadas do seu site para o outro via formulário, já a segunda impede que o site chamado no iframe tenha acesso a cookies e outras informações do usuário coletadas pelo seu site.
