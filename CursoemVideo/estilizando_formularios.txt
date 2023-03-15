@@ -1,0 +1,7 @@
+É possível agrupar um conjunto de informações semelhantes nos forms utilizando a estrutura <fieldset> </fieldset> e dentro dessa estrutura é possível atribuir uma legenda do que esses dados representam utilizando a tag <legend> </legend>. Por padrão as estruturas de fieldset vem com uma borda, porém esta pode ser removida.
+
+É possível utilizar um seletor por atributos utlizando os colchetes:
+input [type="text"]{
+    width: 20em;
+}
+Nesse exemplo estamos selecionando os elemntos inputs que possuem o atributo type="text"
