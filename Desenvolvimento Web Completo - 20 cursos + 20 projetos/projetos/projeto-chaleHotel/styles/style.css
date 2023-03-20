@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-image: url(../images/bg.png);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1180px;
+    min-width: 740px;
+    margin: 15px auto;
+    display: flex;
+}
+
+header{
+    height: 250px;
+    width: 100%;
+    background: #dfd392 url(../images/topo-imagem-principal.png) no-repeat;
+    float: left;
+}
+
+#logo{
+    float: left;
+    padding: 15px;
+}
+
+nav{
+    height: 250px;
+    width: 415px;
+    background: transparent url(../images/topo-imagem-lateral.png) no-repeat;
+    float: right;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+nav ul{
+    line-height: 30px;
+    font-size: 0.80em;
+    margin-right: 20px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: #6e672c;
+}
+
+#locais{
+    font-size: 0.70em;
+    border-top: 1px solid #bfb565;
+    border-bottom: 1px solid #bfb565;
+    color: #8b8448;
+    padding-top: 15px;
+    height: 30px;
+}
+
+#locais span{
+    margin-right: 48px;
+}
+
+#locais a{
+    background-color: #a29750;
+    text-decoration: none;
+    color: #efe49f;
+    padding: 5px 10px;
+}
+
+ul{
+    list-style: none;
+}
