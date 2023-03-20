@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+legend{
+    font-weight: bold;
+}
+
+.contato label, .comentarios label{
+    display: block;
+    cursor: pointer;
+}
+
+input [type="text"]{
+    width: 20em;
+}
+
