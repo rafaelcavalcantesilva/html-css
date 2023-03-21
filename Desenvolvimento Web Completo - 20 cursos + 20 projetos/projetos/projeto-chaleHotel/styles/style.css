@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* ######## CONFIGURAÇÕES GERAIS ######## */
 *{
     margin: 0;
     padding: 0;
@@ -22,6 +23,8 @@ body{
     margin: auto;
 }
 
+/* ######## CONFIGURAÇÕES DE HEADER ######## */
+
 header{
     height: 250px;
     width: 100%;
@@ -35,11 +38,12 @@ header{
 }
 
 nav{
-    height: 250px;
+    height: 235px;
     width: 415px;
     background: transparent url(../images/topo-imagem-lateral.png) no-repeat;
     float: right;
     padding: 15px;
+    padding-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
@@ -47,7 +51,7 @@ nav{
 
 nav img{
     position: relative;
-    bottom: 10px;
+    /* bottom: 10px; */
 }
 
 nav ul{
@@ -55,7 +59,7 @@ nav ul{
     font-size: 0.80em;
     margin-right: 10px;
     position: relative;
-    bottom: 10px;
+    /* bottom: 10px; */
 }
 
 nav ul a{
@@ -90,4 +94,48 @@ nav ul a:hover{
 
 ul{
     list-style: none;
+}
+
+/* ######## CONFIGURAÇÕES DE MAIN ######## */
+
+main{
+    display: flex;
+    background: #ded9b7 url(../images/bg-container.png) repeat-y center top;
+}
+
+main p{
+    margin: 16px 0;
+    margin-top: 5px;
+}
+
+#leftColumn{
+    flex: 1;
+    background: #efeacc url(../images/bg-area-principal.png) repeat-x ;
+    padding: 20px 30px;
+}
+
+#leftColumn h1{
+    font-size: 1.1em;
+    color: #7d7640;
+    padding-bottom: 0;
+}
+
+#rightColumn{
+    flex: 1;
+    background: #ded9b7 url(../images/bg-area-lateral.png) repeat-x;
+    /* display: flex;
+    justify-content: left;
+    flex-wrap: wrap; */
+    padding: 20px 30px;
+}
+
+#rightColumn h2{
+    font-size: 1.1em;
+    color: #615b2d;
+    padding-bottom: 0;
+}
+
+#rightColumn img{
+    max-width: 150px;
+    float: left;
 }
