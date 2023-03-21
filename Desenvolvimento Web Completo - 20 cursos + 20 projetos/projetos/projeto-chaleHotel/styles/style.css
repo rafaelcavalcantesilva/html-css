@@ -11,17 +11,22 @@ html{
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+    display: flex;
+}
+
+#container{
     max-width: 1180px;
     min-width: 740px;
-    margin: 15px auto;
-    display: flex;
+    width: 100%;
+    margin: auto;
 }
 
 header{
     height: 250px;
     width: 100%;
     background: #dfd392 url(../images/topo-imagem-principal.png) no-repeat;
-    float: left;
+    /* float: left; */
 }
 
 #logo{
@@ -40,15 +45,27 @@ nav{
     justify-content: right;
 }
 
+nav img{
+    position: relative;
+    bottom: 10px;
+}
+
 nav ul{
     line-height: 30px;
     font-size: 0.80em;
-    margin-right: 20px;
+    margin-right: 10px;
+    position: relative;
+    bottom: 10px;
 }
 
 nav ul a{
     text-decoration: none;
     color: #6e672c;
+    padding: 5px 5px;
+}
+
+nav ul a:hover{
+    background-color: #fdf6be;
 }
 
 #locais{
@@ -56,18 +73,18 @@ nav ul a{
     border-top: 1px solid #bfb565;
     border-bottom: 1px solid #bfb565;
     color: #8b8448;
-    padding-top: 15px;
-    height: 30px;
+    padding-top: 10px;
+    height: 23px;
 }
 
 #locais span{
-    margin-right: 48px;
+    margin-right: 43px;
 }
 
 #locais a{
     background-color: #a29750;
     text-decoration: none;
-    color: #efe49f;
+    color: #fdf6be;
     padding: 5px 10px;
 }
 

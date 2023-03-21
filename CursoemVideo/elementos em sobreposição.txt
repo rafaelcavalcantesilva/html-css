@@ -1,0 +1,9 @@
+É possível sobrepor um elemento ao outro utilizando a propriedade do z-index, desde que o elemento que vai sobrepor o outro possua um z-index maior.
+ex:
+elemento de baixo{
+	z-index: 1;
+}
+
+elemento de cima{
+	z-index: 2;
+}
