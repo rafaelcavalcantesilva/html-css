@@ -29,7 +29,6 @@ header{
     height: 250px;
     width: 100%;
     background: #dfd392 url(../images/topo-imagem-principal.png) no-repeat;
-    /* float: left; */
 }
 
 #logo{
@@ -51,7 +50,6 @@ nav{
 
 nav img{
     position: relative;
-    /* bottom: 10px; */
 }
 
 nav ul{
@@ -59,7 +57,6 @@ nav ul{
     font-size: 0.80em;
     margin-right: 10px;
     position: relative;
-    /* bottom: 10px; */
 }
 
 nav ul a{
@@ -82,7 +79,7 @@ nav ul a:hover{
 }
 
 #locais span{
-    margin-right: 43px;
+    margin-right: 60px;
 }
 
 #locais a{
@@ -123,19 +120,47 @@ main p{
 #rightColumn{
     flex: 1;
     background: #ded9b7 url(../images/bg-area-lateral.png) repeat-x;
-    /* display: flex;
-    justify-content: left;
-    flex-wrap: wrap; */
     padding: 20px 30px;
 }
 
+#rightColumn a{
+    text-decoration: none;
+    color: black;
+    height: 100px;
+}
+
+#rightColumn li{
+    padding: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #f3efcb;
+    height: 6em;
+}
+
+#rightColumn li:hover{
+    background-color: #f6f3d6;
+    cursor: pointer;
+}
+
 #rightColumn h2{
-    font-size: 1.1em;
+    background: transparent url(../images/ornamento.png) no-repeat right center;
+    font-size: 1em;
     color: #615b2d;
     padding-bottom: 0;
 }
 
 #rightColumn img{
     max-width: 150px;
+    margin-right: 10px;
     float: left;
+}
+
+#rightColumn p{
+    font-size: 0.8em;
+}
+
+/* ######## CONFIGURAÇÕES DE FOOTER ######## */
+footer{
+    background: #fff url(../images/bg-rodape.png) repeat-x;
+    padding: 15px;
+    color: #7d7640;
 }
