@@ -1,9 +1,0 @@
-List comprehension
-Quando preciso preencher uma lista vazia com dados vindos de outra lista, ou não, é possível utilizar o list comprehension para fazer isso em uma única linha de código.
-Sintaxe:
-y = [valor_a_adicionar laço condição]
-Ex:
-x = [1, 2, 3, 4, 5]
-y = [i**2 for in in x]
-
-No exemplo acima não possuimos condição e o código ira fazer com que y seja preenchida com o quadrado de cada valor de x.
