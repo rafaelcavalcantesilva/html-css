@@ -10,51 +10,35 @@ body{
 }
 
 #balloons{
-    width: 99vw;
-    height: 100vh;
     background-image: url(../images/imagem1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 #road{
-    width: 99vw;
-    height: 100vh;
     background-image: url(../images/imagem2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 #sunset{
-    width: 99vw;
-    height: 100vh;
     background-image: url(../images/imagem3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 #mountains{
-    width: 99vw;
-    height: 100vh;
     background-image: url(../images/imagem4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-.fade{
+.image{
     width: 99vw;
     height: 100vh;
-    background-color: #ffffff3f;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    opacity: 0.7;
 }
 
-.fade h1{
+.image h1{
     background-color: rgb(97, 97, 97);
     color: #fff;
     padding: 15px;
@@ -77,4 +61,5 @@ body{
 
 .text p{
     margin-bottom: 1.5em;
+    text-align: justify;
 }
