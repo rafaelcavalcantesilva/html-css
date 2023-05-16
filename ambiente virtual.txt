@@ -1,0 +1,10 @@
+criar venv
+python -m venv .venv
+
+entrar na venv
+.\nome_venv\Scripts\activate
+
+criar requirements
+
+pip freeze > requirements.txt
+

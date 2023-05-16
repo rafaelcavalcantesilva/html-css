@@ -1,0 +1,3 @@
+Relacionamentos-Cardinalidades
+
+Quando existe uma cardinalidade de n para n, para que essa relação seja de fato estabelecida é necessário criar uma nova tabela, que possuirá uma chave primária e fará uso de duas chaves estrangeiras (são chaves relacionadas as chaves primárias de outras tabelas), dessa forma estabelecemos relações entre as chaves primárias das duas tabelas.
