@@ -1,8 +1,0 @@
-enumerate
-
-A função enumerate retorna um conjunto de valores, o nome e o índice. Ex:
-lista = ['abacate', 'bola' 'cachorro']
-
-for i, nome in enumerate(lista):
-	print(i, nome)
-No exemplo acima será printado na tela o índice e o valor correspondente a cada um na lista
